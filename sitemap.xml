@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://karolinehc.github.io/blog/la-mineria-de-texto-sentimental/</loc>
+    <lastmod>2017-12-23T08:40:28+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://karolinehc.github.io/blog/business-intelligent-y-big-data/</loc>
     <lastmod>2017-11-30T08:40:46+12:00</lastmod>
   </url>
@@ -35,11 +40,6 @@
   <url>
     <loc>https://karolinehc.github.io/blog/marketing-digital/</loc>
     <lastmod>2017-07-25T08:43:24+12:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://karolinehc.github.io/blog/lv/</loc>
-    <lastmod>2017-07-25T08:40:28+12:00</lastmod>
   </url>
   
   <url>
@@ -314,7 +314,7 @@
   
   <url>
     <loc>https://karolinehc.github.io/blog/</loc>
-    <lastmod>2017-11-30T08:40:46+12:00</lastmod>
+    <lastmod>2017-12-23T08:40:28+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -325,7 +325,7 @@
   
   <url>
     <loc>https://karolinehc.github.io/</loc>
-    <lastmod>2017-11-30T08:40:46+12:00</lastmod>
+    <lastmod>2017-12-23T08:40:28+12:00</lastmod>
     <priority>0</priority>
   </url>
   
