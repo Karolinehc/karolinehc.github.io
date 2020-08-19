@@ -156,12 +156,13 @@
         </div>
 
         <div class="container markdown fade-in two top-pad"></div>
-
-        <p>
+        
+        <p style="background-color:silver;">
           Let’s start with some theory about Lineal Regression and how to perform regression and interpret the results.
           
           Here, Y is the predicted value of the outcome variable, β1 is the intercept (where the line crosses the x-axis), each X
-          is the value of a variable, and each β2 is the respective weight assigned to that variable.
+          is the value of a variable, and each β2 is the respective weight assigned to that variable.</p>
+          
          <p><strong>Y= β1+β2X+ϵ</strong></p> 
           
           In this real exercise, we have some historical transaction data from March to July. For each transaction, we have
@@ -174,12 +175,12 @@
           In this article, we will use the package R to perform only a simple linear regression.
           <p><strong>Sales=β0+β1*EffortM+ε</strong></p> 
           
-          we will use:
-          <ul>
-            <li> the str() function to get a view of the structure of our data.</li>
+         <p>we will use:
+        <ul>
+          <li> the str() function to get a view of the structure of our data.</li>
           <li>the summary () to view some summary statistics</li>
           <li>We can get a deeper insight into the distributions of data with quantile ().</li>
-          </ul>
+        </ul></p> 
           
 
           <p><img src="../../img/22july.png" alt="linearregression" /></p>
@@ -188,9 +189,6 @@
 
         <p>
           Let’s Understand what these important terms and numbers represent.
-          • Mean: The sum of all the values divided by the total number of values. In our example data set, mean budget The Effort
-          (EffortM) that your Company make investment in advertising for this case is $258,138. The average Sales, on the other
-          hand, is much higher at $2,810.000.
 
           <ul>
             <li>Median: The middle number in a sorted list with odd numbers. In a list with even numbers, the median is average of the
@@ -199,8 +197,9 @@
             <li>Max: This is the highest number value for each variable.</li>
 
           </ul>
+          </p>
           
-          
+          <p>
           So we’ve already gleaned some interesting information about our data set. We know the company spends less, on average,
           on advertising (EffortM) and their ROI is high.
           
