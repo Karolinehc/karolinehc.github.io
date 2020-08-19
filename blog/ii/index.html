@@ -14,7 +14,7 @@
 
     <base href="https://karolinehc.github.io/" />
     <title>
-      Post10
+      Using R Language-Simple Linear Regression for Marketing
     </title>
     <link rel="canonical" href="https://karolinehc.github.io/blog/ii/" />
 
@@ -115,7 +115,7 @@
             <a href="https://karolinehc.github.io/blog/ii/">ii</a>
           </h2>
           <div class="post-data">
-            Jul 25, 2017 | 0 minutos leidos
+            August 19, 2020 | 0 minutos leidos
           </div>
 
           <div class="blog-share">
@@ -156,6 +156,77 @@
         </div>
 
         <div class="container markdown fade-in two top-pad"></div>
+
+        <p>
+          Let’s start with some theory about Lineal Regression and how to perform regression and interpret the results.
+          
+          Here, Y is the predicted value of the outcome variable, β1 is the intercept (where the line crosses the x-axis), each X
+          is the value of a variable, and each β2 is the respective weight assigned to that variable.
+          Y= β1+β2X+ϵ
+          
+          In this real exercise, we have some historical transaction data from March to July. For each transaction, we have
+          identified (Sales), the number of units purchase Quantity, the date of the purchase and the Effort in Marketing Digital
+          (EffortM).
+          
+          
+          Basically, I’m going to show you that investment in advertising on the company’s sales (EffortM ) will have an impact in
+          sales growth.
+          In this article, we will use the package R to perform only a simple linear regression.
+          Sales=β0+β1*EffortM+ε
+          
+          we will use:
+          * the str() function to get a view of the structure of our data.
+          * the summary to view some summary statistics
+          * We can get a deeper insight into the distributions of data with quantile.
+
+          <p><img src="../../img/22july.png" alt="linearregression" /></p>
+
+        </p>
+
+        <p>
+          Let’s Understand what these important terms and numbers represent.
+          • Mean: The sum of all the values divided by the total number of values. In our example data set, mean budget The Effort
+          (EffortM) that your Company make investment in advertising for this case is $258,138. The average Sales, on the other
+          hand, is much higher at $2,810.000.
+          • Median: The middle number in a sorted list with odd numbers. In a list with even numbers, the median is average of the
+          two numbers that divide the sorted data into upper and lower halves.
+          • Min: This is the lowest number value for each variable.
+          • Max: This is the highest number value for each variable.
+          
+          So we’ve already gleaned some interesting information about our data set. We know the company spends less, on average,
+          on advertising (EffortM) and their ROI is high.
+          
+          Take a look the continuous variable called in this real example (EffortM).
+          So Let me show you a scatter plot of EffortM variable.
+          
+          We have EffortM over here plotted against the dependent variable, which is Sales.
+          Looking at this at the scatter plot, we clearly see that there is seems to be
+          a linear relationship.
+
+        </p>
+
+        <p><img src="../../img/22jun.png" alt="linearregression" /></p>
+
+        <p>
+
+          So basically this scatter plot tells us that there seems to be a very strong relationship between Sales and between
+          EffortM.
+          
+          In order to verify verify this, the next thing that I do is that I fit a linear regression model.
+          
+          This the output contains.
+
+        </p>
+
+            <p><img src="../../img/22july.png" alt="linearregression" /></p>
+
+            <p>
+              If we look at the variable EffortM over here,
+              what we see is that the coefficient of EffortM is 13.5 In our case EffortM
+              
+              It's point 13.5, so it's positive. So basically this means that when EffortM increases by one
+              Sales is going to increase by 13.5
+            </p>
 
         <div class="disqus">
           <div id="disqus_thread"></div>
