@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      name="description"
+      content="Marketing Digital @karoline_hc karolinehc karoline_hc"
+    />
+
+    <base href="https://karolinehc.github.io/" />
+    <title>
+      Using R Language-Simple Linear Regression for Marketing
+    </title>
+    <link rel="canonical" href="https://karolinehc.github.io/blog/ii/" />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500|Work+Sans"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://karolinehc.github.io/css/dark-style.css?t=1530585055"
+    />
+
+    <link rel="shortcut icon" href="https://karolinehc.github.io/img/fav.ico" />
+
+    <script>
+      window.ga =
+        window.ga ||
+        function () {
+          (ga.q = ga.q || []).push(arguments);
+        };
+      ga.l = +new Date();
+      ga("create", "UA-102568110-1", "auto");
+      ga("send", "pageview");
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+  </head>
+
+  <body lang="en">
+    <div class="section" id="top">
+      <div class="container hero fade-in one">
+        <h1 class="bold-title is-1">Helen Carolina Consultora's Blog</h1>
+      </div>
+
+      <div class="section fade-in two">
+        <div class="container">
+          <hr />
+          <nav class="nav nav-center">
+            <span
+              id="nav-toggle"
+              class="nav-toggle"
+              onclick="document.getElementById('nav-menu').classList.toggle('is-active');"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <div id="nav-menu" class="nav-left nav-menu">
+              <span class="nav-item">
+                <a href="https://karolinehc.github.io/">Inicio</a>
+              </span>
+              <span class="nav-item">
+                <a href="https://karolinehc.github.io/#about">Acerca de</a>
+              </span>
+
+              <span class="nav-item">
+                <a href="https://karolinehc.github.io/#projects">Projectos</a>
+              </span>
+
+              <span class="nav-item">
+                <a href="https://karolinehc.github.io/blog">Regresar al blog</a>
+              </span>
+
+              <span class="nav-item">
+                <a href="https://karolinehc.github.io/#contact">Contacto</a>
+              </span>
+
+              <span class="nav-item">
+                <a href="https://karolinehc.github.io/index.xml"
+                  ><i class="fa fa-rss"></i
+                ></a>
+              </span>
+            </div>
+          </nav>
+          <hr />
+        </div>
+
+        <div class="container fade-in two">
+          <h2 class="title is-1 top-pad strong-post-title">
+            <a href="https://karolinehc.github.io/blog/ii/">Using R Language-Simple Linear Regression for Marketing</a>
+          </h2>
+          <div class="post-data">
+            August 19, 2020 | 0 minutos leidos
+          </div>
+
+          <div class="blog-share">
+            Compartir en:
+            <a
+              class="twitter-share-button"
+              href="https://twitter.com/intent/tweet?text=Read%20ii%20https%3a%2f%2fkarolinehc.github.io%2fblog%2fii%2f"
+              onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"
+            >
+              <i class="fa fa-twitter"></i>
+              <span class="hidden">Twitter</span>
+            </a>
+            <a
+              class="icon-facebook"
+              href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkarolinehc.github.io%2fblog%2fii%2f"
+              onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"
+            >
+              <i class="fa fa-facebook"></i>
+              <span class="hidden">Facebook</span>
+            </a>
+            <a
+              class="icon-pinterest"
+              href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fkarolinehc.github.io%2fblog%2fii%2f&amp;description=ii"
+              onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;"
+            >
+              <i class="fa fa-pinterest"></i>
+              <span class="hidden">Pinterest</span>
+            </a>
+            <a
+              class="icon-linkedin"
+              href="https://www.linkedin.com/share?url=https%3a%2f%2fkarolinehc.github.io%2fblog%2fii%2f"
+              onclick="window.open(this.href, 'linkedin-share', 'width=490,height=530');return false;"
+            >
+              <i class="fa fa-linkedin"></i>
+              <span class="hidden">Linkedin</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="container markdown fade-in two top-pad"></div>
+        
+        <p>
+          Let’s start with some theory about Lineal Regression and how to perform regression and interpret the results.
+          
+          Here, Y is the predicted value of the outcome variable, β1 is the intercept (where the line crosses the x-axis), each X
+          is the value of a variable, and each β2 is the respective weight assigned to that variable.</p>
+
+         <p style="background-color:silver;"><strong>Y= β1+β2X+ϵ</strong></p> 
+          
+          In this real exercise, we have some historical transaction data from March to July. For each transaction, we have
+          identified (Sales), the number of units purchase Quantity, the date of the purchase and the Effort in Marketing Digital
+          (EffortM).
+          
+          
+          Basically, I’m going to show you that investment in advertising on the company’s sales (EffortM ) will have an impact in
+          sales growth.
+          In this article, we will use the package R to perform only a simple linear regression.
+          <p style="background-color:silver;"><strong>Sales=β0+β1*EffortM+ε</strong></p> 
+          
+         <p style="background-color:floralwhite;">we will use:
+        <ul>
+          <li> the str() function to get a view of the structure of our data.</li>
+          <li>the summary () to view some summary statistics</li>
+          <li>We can get a deeper insight into the distributions of data with quantile ().</li>
+        </ul>
+      </p> 
+          
+
+          <p><img src="../../img/22july.png" alt="linearregression" /></p>
+
+        </p>
+
+        <p style="background-color:ghostwhite;">
+          Let’s Understand what these important terms and numbers represent.
+
+          <ul>
+            <li> Mean: The sum of all the values divided by the total number of values. In our example data set, mean budget The Effort
+            (EffortM) that your Company make investment in advertising for this case is $258,138. The average Sales, on the other
+            hand, is much higher at $2,810.000.</li>
+            <li>Median: The middle number in a sorted list with odd numbers. In a list with even numbers, the median is average of the
+            two numbers that divide the sorted data into upper and lower halves.</li> 
+            <li>Min: This is the lowest number value for each variable.</li> 
+            <li>Max: This is the highest number value for each variable.</li>
+
+          </ul>
+          </p>
+          
+          <p>
+          So we’ve already gleaned some interesting information about our data set. We know the company spends less, on average,
+          on advertising (EffortM) and their ROI is high.
+          
+          Take a look the continuous variable called in this real example (EffortM).
+          So Let me show you a scatter plot of EffortM variable.
+          
+          We have EffortM over here plotted against the dependent variable, which is Sales.
+          Looking at this at the scatter plot, we clearly see that there is seems to be
+          a linear relationship.
+
+        </p>
+
+        <p><img src="../../img/22ju.png" alt="linearregression" /></p>
+
+        <p>
+
+          So basically this scatter plot tells us that there seems to be a very strong relationship between Sales and between
+          EffortM.
+          
+          In order to verify verify this, the next thing that I do is that I fit a linear regression model.
+          
+          This the output contains.
+
+        </p>
+
+            <p><img src="../../img/22july.png" alt="linearregression" /></p>
+
+            <p>
+              If we look at the variable EffortM over here,
+              what we see is that the coefficient of EffortM is 13.5 In our case EffortM
+              
+              It's point 13.5, so it's positive. So basically this means that when EffortM increases by one
+              Sales is going to increase by 13.5
+            </p>
+
+        <div class="disqus">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+            var disqus_shortname = "https-karolinehc-github-io";
+            var disqus_identifier =
+              "https:\/\/karolinehc.github.io\/blog\/ii\/";
+            var disqus_title = "ii";
+            var disqus_url = "https:\/\/karolinehc.github.io\/blog\/ii\/";
+
+            (function () {
+              var dsq = document.createElement("script");
+              dsq.type = "text/javascript";
+              dsq.async = true;
+              dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+              (
+                document.getElementsByTagName("head")[0] ||
+                document.getElementsByTagName("body")[0]
+              ).appendChild(dsq);
+            })();
+          </script>
+          <noscript
+            >Please enable JavaScript to view the
+            <a href="http://disqus.com/?ref_noscript"
+              >comments powered by Disqus.</a
+            ></noscript
+          >
+          <a href="http://disqus.com" class="dsq-brlink"
+            >comments powered by <span class="logo-disqus">Disqus</span></a
+          >
+        </div>
+
+        <div class="container has-text-centered top-pad">
+          <hr />
+          <a href="https://karolinehc.github.io/blog/ii/#top"
+            ><i class="fa fa-arrow-up"></i
+          ></a>
+          <hr />
+        </div>
+
+        <div class="section" id="footer">
+          <div class="container has-text-centered">
+            Economia Digital Internet Marketing Google Ads -Creative Commons
+            Attribution 3.0 Unported
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $('a[href^="https:\/\/karolinehc.github.io\/blog\/ii\/#"]').click(
+        function (e) {
+          e.preventDefault();
+          var target = this.hash;
+          $("html, body").animate(
+            {
+              scrollTop: $(target).offset().top,
+            },
+            500
+          );
+          return false;
+        }
+      );
+    </script>
+  </body>
+</html>
